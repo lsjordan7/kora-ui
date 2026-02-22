@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import PhoneFrame from './components/PhoneFrame'
 import Welcome from './screens/Welcome'
 import Onboarding from './screens/Onboarding'
 import Home from './screens/Home'
@@ -7,9 +6,9 @@ import Home from './screens/Home'
 const SCREENS = ['welcome', 'onboarding', 'home']
 
 const SCREEN_LABELS = {
-  welcome: 'KORA_01 — Welcome',
-  onboarding: 'KORA_02 — Onboarding',
-  home: 'KORA_03 — Home',
+  welcome: 'Welcome',
+  onboarding: 'Onboarding',
+  home: 'Home',
 }
 
 export default function App() {
@@ -26,13 +25,7 @@ export default function App() {
   }
 
   return (
-    <div style={{ position: 'relative' }}>
-      <PhoneFrame screen={SCREEN_LABELS[screen]}>
-        {screen === 'welcome' && <Welcome onNext={next} />}
-        {screen === 'onboarding' && <Onboarding onNext={next} onBack={back} />}
-        {screen === 'home' && <Home onBack={back} />}
-      </PhoneFrame>
-
+    <div style={{ minHeight: '100vh', background: '#0F0A1E' }}>
       {/* Screen switcher pills */}
       <div
         style={{
@@ -68,9 +61,16 @@ export default function App() {
               letterSpacing: '0.02em',
             }}
           >
-            {SCREEN_LABELS[s].split(' — ')[1]}
+            {SCREEN_LABELS[s]}
           </button>
         ))}
+      </div>
+
+      {/* Screen content */}
+      <div style={{ maxWidth: 480, margin: '0 auto', height: '100vh' }}>
+        {screen === 'welcome' && <Welcome onNext={next} />}
+        {screen === 'onboarding' && <Onboarding onNext={next} onBack={back} />}
+        {screen === 'home' && <Home onBack={back} />}
       </div>
     </div>
   )

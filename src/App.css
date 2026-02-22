@@ -1,4 +1,9 @@
 #root {
   min-height: 100vh;
-  background: #060412;
+  background: #0F0A1E;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }

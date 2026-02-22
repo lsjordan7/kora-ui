@@ -95,8 +95,8 @@ export default function Home({ onBack }) {
       {/* Scrollable content */}
       <div className="flex-1 overflow-y-auto" style={{ paddingBottom: 90 }}>
 
-        {/* Status bar space */}
-        <div style={{ height: 48 }} />
+        {/* Space to clear the nav pills */}
+        <div style={{ height: 72 }} />
 
         {/* Header */}
         <div className="px-6 mb-6 z-10 relative">

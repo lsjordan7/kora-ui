@@ -55,8 +55,8 @@ export default function Onboarding({ onNext, onBack }) {
 
   return (
     <div
-      className="relative flex flex-col h-full overflow-hidden px-6 pt-14 pb-10"
-      style={{ background: '#0F0A1E' }}
+      className="relative flex flex-col h-full overflow-hidden px-6 pb-10"
+      style={{ background: '#0F0A1E', paddingTop: 72 }}
     >
       {/* Subtle top glow */}
       <div

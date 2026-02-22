@@ -1,7 +1,7 @@
 export default function Welcome({ onNext }) {
   return (
-    <div className="relative flex flex-col items-center justify-between h-full overflow-hidden px-6 pt-16 pb-10"
-      style={{ background: '#0F0A1E' }}>
+    <div className="relative flex flex-col items-center justify-between h-full overflow-hidden px-6 pb-10"
+      style={{ background: '#0F0A1E', paddingTop: 80 }}>
 
       {/* Radial bioluminescent glow background */}
       <div
